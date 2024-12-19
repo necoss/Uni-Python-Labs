@@ -7,14 +7,14 @@ class Order:
 	
 	def addItem(self, item, price):
 		if price <= 0:
-			raise ValueError("Enter valid price (it should be higher than 0)")
+			return "Enter valid price (it should be higher than 0)"
 		
 		self.items[item] = price
 		return self.items
 	
 	def removeItem(self, item):
 		if item not in self.items:
-			raise KeyError(f"There is no item with name as {item}")
+			return f"There is no item with name as {item}"
 
 		confirmation = input("Do you really wanna remove this item? (yes/no)").strip().lower()
 
