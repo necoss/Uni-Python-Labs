@@ -44,4 +44,7 @@ ax1.annotate('super important point',
             arrowprops=arrowprops)
 
 plt.legend()
+
+plt.savefig('temp1.pdf', format='pdf')
+
 plt.show()
